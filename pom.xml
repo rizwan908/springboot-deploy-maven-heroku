@@ -27,6 +27,24 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+	
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+		
+		<dependency>
+        	<groupId>javax.xml.bind</groupId>
+        	<artifactId>jaxb-api</artifactId>
+        	<version>2.3.0</version>
+    	</dependency>
+	
 	</dependencies>
 
 	<build>
@@ -36,16 +54,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			
-			<plugin>
-      			<groupId>com.heroku.sdk</groupId>
-      			<artifactId>heroku-maven-plugin</artifactId>
-      			<configuration>
-        			<processTypes>
-          				<web>java $JAVA_OPTS -Dserver.port=$PORT -cp target/classes:target/dependency/* com.topsyntax.demo.DemoApplication</web>
-        			</processTypes>
-        			<appName>demo-appli-sboot</appName>
-      			</configuration>
-    		</plugin>
+
 		</plugins>
 	</build>
 
